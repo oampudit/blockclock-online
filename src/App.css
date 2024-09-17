@@ -1,0 +1,346 @@
+/* Ensure the footer stays at the bottom */
+footer {
+  background-color: #333;
+  /* Customize the background color */
+  color: #fff;
+  /* Customize the text color */
+  padding: 0;
+  text-align: center;
+  font-size: small;
+  width: 100%;
+  position: fixed; /* Keep the footer at the bottom */
+  bottom: 0;
+}
+
+/* Ad container */
+.adsense-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.adsbygoogle {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .adsbygoogle {
+    max-width: 468px;
+    /* Medium-sized ad for larger screens */
+  }
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --highlight-color: #ff9900;
+  --block-bg-color: #2c2c2c;
+}
+
+.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --highlight-color: #007bff;
+  --block-bg-color: #f0f0f0;
+}
+
+/* General Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.blockclock {
+  background-color: var(--block-bg-color);
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.blockclock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.blockclock-header img {
+  height: 50px;
+}
+
+.blockclock-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--highlight-color);
+}
+
+.blockclock-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%; /* Ensure content fits screen width */
+}
+
+.blockclock-display-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--block-bg-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%; /* Ensure rows take up full width */
+}
+
+.blockclock-display-cell-big {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--highlight-color);
+  width: 100%;
+}
+
+.blockclock-display-cell-small {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.blockclock-display-label {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #a0a0a0;
+}
+
+select {
+  padding: 5px;
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; /* Make select box full width on mobile */
+}
+
+select:focus {
+  border-color: var(--highlight-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .blockclock {
+    padding: 10px;
+    max-width: 100%; /* Ensure blockclock fits mobile screen width */
+  }
+
+  .blockclock-header h1 {
+    font-size: 20px;
+  }
+
+  .blockclock-header img {
+    height: 40px;
+  }
+
+  .blockclock-display-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .blockclock-display-cell-big {
+    font-size: 32px;
+  }
+
+  .blockclock-display-cell-small {
+    font-size: 16px;
+  }
+
+  .blockclock-display-label {
+    font-size: 12px;
+  }
+
+  select {
+    font-size: 14px;
+    width: 100%; /* Ensure select box fits the width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .blockclock {
+    padding: 8px;
+    max-width: 100%; /* Ensure blockclock fits mobile screen width */
+  }
+
+  .blockclock-header h1 {
+    font-size: 18px;
+  }
+
+  .blockclock-header img {
+    height: 35px;
+  }
+
+  .blockclock-display-row {
+    gap: 5px;
+  }
+
+  .blockclock-display-cell-big {
+    font-size: 28px;
+  }
+
+  .blockclock-display-cell-small {
+    font-size: 14px;
+  }
+
+  .blockclock-display-label {
+    font-size: 10px;
+  }
+
+  select {
+    font-size: 12px;
+    width: 100%; /* Make select box full width on mobile */
+  }
+}
+
+/* Theme Toggle Button Styles */
+button {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: 'Roboto Mono', monospace;
+}
+
+button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: translateY(-3px);
+}
+
+button:active {
+  background-color: var(--highlight-color);
+  transform: translateY(0);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+}
+
+/* Adjust button for mobile devices */
+@media (max-width: 768px) {
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+.theme-switch-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.theme-switch-button:focus {
+  outline: none;
+}
+
+/* Button to toggle chart visibility (shown only on mobile) */
+.toggle-chart-button {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  border: none;
+  padding: 6px 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: none; /* Hidden by default */
+}
+
+.toggle-chart-button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+.toggle-chart-button:focus {
+  outline: none;
+}
+
+/* Show button on mobile devices */
+@media (max-width: 768px) {
+  .toggle-chart-button {
+    display: inline-block;
+  }
+}
+
+/* Hide chart on mobile by default, show only when toggled */
+.mobile-hidden {
+  display: none;
+}
+
+/* Always show chart on larger screens */
+@media (min-width: 769px) {
+  .chart-container {
+    display: block !important;
+  }
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  width: 100%;
+  height: 30px; /* Increased height for better visibility */
+  background-color: #444;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--highlight-color);
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* White color for contrast */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.progress-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff; /* Ensure the text is visible on the bar */
+}
